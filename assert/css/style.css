@@ -38,6 +38,11 @@ span{
     padding: 10px;
     font-size: 1.2rem;
 }
+@media screen and (max-width:577px) {
+    #con1 .row:nth-of-type(2) form button{
+        margin-top: 20px;
+    }
+}
 
 button:active{
     transform: scale(0.5);
