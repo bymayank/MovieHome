@@ -37,7 +37,6 @@ const getUpcomingMovies = async ()=>{
 
         li.addEventListener('click',(event)=>{
             sessionStorage.setItem("movie_id",x.id);
-            console.log(sessionStorage.getItem("movie_id"));
         });
 
         upcomingMovies.append(li);
@@ -70,7 +69,6 @@ const getTopRatedMovies = async ()=>{
 
         li.addEventListener('click',(event)=>{
             sessionStorage.setItem("movie_id",x.id);
-            console.log(sessionStorage.getItem("movie_id"));
         });
 
         topRatedMovies.append(li);
@@ -103,7 +101,6 @@ const getPopularMovies = async ()=>{
 
         li.addEventListener('click',(event)=>{
             sessionStorage.setItem("movie_id", x.id);
-            console.log(sessionStorage.getItem("movie_id"));
         })
 
         popularMovies.append(li);
@@ -134,9 +131,7 @@ const getNowPlayingMovies = async ()=>{
         </div></a>`;
 
         li.addEventListener('click',(event)=>{
-            // Store
             sessionStorage.setItem("movie_id",x.id);
-            console.log(sessionStorage.getItem("movie_id"));
         });
 
         nowPlayingMovies.append(li);

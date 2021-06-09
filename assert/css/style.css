@@ -9,6 +9,11 @@ div div div img{
 }
 
 
+.paraSearch{
+    font-size: 2.4rem;
+    color: white;
+}
+
 
 
 span{
@@ -72,8 +77,6 @@ a{
 .container .row ul{
     margin-top: 15px;
     list-style: none;
-    /* to show as a grid instead in 1 line */
-    /* white-space: pre-line; */
     white-space: nowrap;
     overflow: hidden;
 }
@@ -104,12 +107,6 @@ a{
 
 
 
-
-
-
-
-
-
 #details_container1{
     background: #495057;
 }
@@ -131,7 +128,6 @@ a{
     padding: 10px;
     border: 2px solid rgb(107, 241, 107);
     border-radius: 50%;
-    /* border-color: linear-gradient(to right,rgb(107, 241, 107) 0%,rgb(107, 241, 107) 83%,rgb(44, 44, 44) 83% ,rgb(44, 44, 44) 100% ); */
 }
 #details_container1 .row div  p{
     line-height: 2rem;
@@ -157,4 +153,32 @@ a{
 }
 #genres li div h3{
     padding-top: 10px;
+}
+
+
+#search ul{
+    white-space: pre-line;
+}
+#search ul:hover{
+    white-space: pre-line;
+    overflow: hidden;
+}
+#search li{
+    list-style: none;
+    width: 160px;
+    height: 350px;
+    margin: 5px;
+}
+#search .row h3{
+    color: whitesmoke;
+}
+#search .row ul img{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: 80%;
+}
+#search .row ul h3,h5{
+    font-size: 1.2rem;
+    color: whitesmoke;
 }

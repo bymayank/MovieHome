@@ -2,13 +2,23 @@
 const h3 = document.querySelectorAll('.moviename');
 const trending = document.querySelector('#trending');
 const popular = document.querySelector('#popular');
+const form = document.querySelector('form');
+const viewAll = document.querySelectorAll('.viewAll');
+
+form.addEventListener('submit',function(e){
+    const input = document.querySelector('input');
+    const name = input.value;
+    console.log(name);
+    sessionStorage.setItem("name",name);
+})
+
+
 
 
 
 const getPopular = async()=>{
     const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=3b64ac412725369ae963817a7514e443`;
     const res = await axios.get(url);
-
 
     for(let x of res.data.results){
         const li = document.createElement('li');
@@ -39,7 +49,6 @@ const getPopular = async()=>{
 const getTrendings = async(time_window)=>{
     const url = `https://api.themoviedb.org/3/trending/all/${time_window}?api_key=3b64ac412725369ae963817a7514e443`;
     const res = await axios.get(url);
-
 
     for(let x of res.data.results){
         const li = document.createElement('li');
@@ -78,11 +87,9 @@ const getTrendings = async(time_window)=>{
             </div></a>`;
 
             li.addEventListener('click',(event)=>{
-                sessionStorage.setItem("tv_id",x.id);
+                localStorage.setItem("tv_id",x.id);
             });
-        }
-
-        
+        } 
         
         trending.append(li);
     }
@@ -91,19 +98,4 @@ const getTrendings = async(time_window)=>{
 
 getTrendings("week");
 getPopular();
-
-
-
-
-
-
-
-
-
-
-
-// ___________________Movie Details________________________________
-
-
-
 
