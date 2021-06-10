@@ -1,0 +1,13 @@
+body{
+    background: #495057;
+}
+
+#ulTasks li.done {
+    color: #6c757d;
+    text-decoration: line-through;
+  }
+
+  #newtaskhelp
+  {
+      color: aliceblue;
+  }
